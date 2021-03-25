@@ -91,5 +91,6 @@ gmon.out
 .vs/
 Renpy/Debug/
 Renpy/Renpy/Debug/
-Renpy/Generated Files/
+"Renpy/Generated Files/"
 Renpy/Renpy/x64/
+Renpy/Python27/x64/
