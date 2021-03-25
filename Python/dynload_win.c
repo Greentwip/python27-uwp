@@ -184,7 +184,9 @@ dl_funcptr _PyImport_GetDynLoadFunc(const char *fqname, const char *shortname,
             will certainly fail too, so use its error code */
 
         /* Don't display a message box when Python can't load a DLL */
+#if !defined(PY_UWP)
         old_mode = SetErrorMode(SEM_FAILCRITICALERRORS);
+#endif
 
         if (GetFullPathName(pathname,
                             sizeof(pathbuf),
@@ -192,8 +194,15 @@ dl_funcptr _PyImport_GetDynLoadFunc(const char *fqname, const char *shortname,
                             &dummy)) {
             ULONG_PTR cookie = _Py_ActivateActCtx();
             /* XXX This call doesn't exist in Windows CE */
+            
+
+#if !PY_UWP
             hDLL = LoadLibraryEx(pathname, NULL,
-                                 LOAD_WITH_ALTERED_SEARCH_PATH);
+                LOAD_WITH_ALTERED_SEARCH_PATH);
+#else
+            hDLL = LoadPackagedLibrary(pathname, 0);
+#endif
+
             _Py_DeactivateActCtx(cookie);
         }
 

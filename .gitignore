@@ -87,3 +87,9 @@ coverage/
 externals/
 htmlcov/
 gmon.out
+
+.vs/
+Renpy/Debug/
+Renpy/Renpy/Debug/
+Renpy/Generated Files/
+Renpy/Renpy/x64/

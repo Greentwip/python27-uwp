@@ -378,6 +378,7 @@ PyDoc_STRVAR(PyHKEY_Detach_doc,
 "On 64 bit windows, the result of this function is a long integer");
 
 
+#if !PY_UWP
 /************************************************************************
 
   The PyHKEY object definition
@@ -1741,6 +1742,39 @@ PyQueryReflectionKey(PyObject *self, PyObject *args)
                                                    "RegQueryReflectionKey");
     return PyBool_FromLong(result);
 }
+#else
+/* WinRT: provide all functions as not-implemented.  */
+#define _not_implemented(fn) \
+    static PyObject* Py##fn(PyObject *self, PyObject *args) { \
+    PyErr_SetExcFromWindowsErr(PyExc_WindowsError, ERROR_ACCESS_DENIED); \
+    return NULL;  \
+    }
+_not_implemented(CloseKey)
+_not_implemented(ConnectRegistry)
+_not_implemented(CreateKey)
+_not_implemented(CreateKeyEx)
+_not_implemented(DeleteKey)
+_not_implemented(DeleteKeyEx)
+_not_implemented(DeleteValue)
+_not_implemented(DisableReflectionKey)
+_not_implemented(EnableReflectionKey)
+_not_implemented(EnumKey)
+_not_implemented(EnumValue)
+_not_implemented(ExpandEnvironmentStrings)
+_not_implemented(FlushKey)
+_not_implemented(LoadKey)
+_not_implemented(OpenKey)
+_not_implemented(QueryValue)
+_not_implemented(QueryValueEx)
+_not_implemented(QueryInfoKey)
+_not_implemented(QueryReflectionKey)
+_not_implemented(SaveKey)
+_not_implemented(SetValue)
+_not_implemented(SetValueEx)
+
+#endif
+
+
 
 static struct PyMethodDef winreg_methods[] = {
     {"CloseKey",         PyCloseKey,        METH_VARARGS, CloseKey_doc},
@@ -1799,6 +1833,9 @@ PyMODINIT_FUNC init_winreg(void)
     if (m == NULL)
         return;
     d = PyModule_GetDict(m);
+
+#if !PY_UWP
+
     if (PyType_Ready(&PyHKEY_Type) < 0)
         return;
     PyHKEY_Type.tp_doc = PyHKEY_doc;
@@ -1807,6 +1844,7 @@ PyMODINIT_FUNC init_winreg(void)
                              (PyObject *)&PyHKEY_Type) != 0)
         return;
     Py_INCREF(PyExc_WindowsError);
+#endif
     if (PyDict_SetItemString(d, "error",
                              PyExc_WindowsError) != 0)
         return;

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0f670477-4772-422e-972c-4fec42ea7c1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bzip2 1.0.6 Header Files">
+      <UniqueIdentifier>{d9a060a4-43b8-4071-9b2f-56fab69c69ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bzip2 1.0.6 Source Files">
+      <UniqueIdentifier>{409116e0-d347-4e30-a5f5-26245d523db6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Modules\bz2module.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -563,7 +563,10 @@ typedef struct {
     char osfile;
 } my_ioinfo;
 
+#if !defined(PY_UWP)
 extern __declspec(dllimport) char * __pioinfo[];
+#endif
+
 #define IOINFO_L2E 5
 #define IOINFO_ARRAY_ELTS   (1 << IOINFO_L2E)
 #define IOINFO_ARRAYS 64
@@ -572,6 +575,23 @@ extern __declspec(dllimport) char * __pioinfo[];
 #define _NO_CONSOLE_FILENO (intptr_t)-2
 
 /* This function emulates what the windows CRT does to validate file handles */
+
+#if defined(PY_UWP)
+int
+_PyVerify_fd(int fd)
+{
+    intptr_t osh;
+    /* Fast check for the only condition we know */
+    if (fd < 0) {
+        _set_errno(EBADF);
+        return 0;
+    }
+    osh = _get_osfhandle(fd);
+    return osh != (intptr_t)-1;
+}
+
+
+#else
 int
 _PyVerify_fd(int fd)
 {
@@ -608,7 +628,7 @@ _PyVerify_fd(int fd)
     errno = EBADF;
     return 0;
 }
-
+#endif
 /* the special case of checking dup2.  The target fd must be in a sensible range */
 static int
 _PyVerify_fd_dup2(int fd1, int fd2)
@@ -5384,6 +5404,9 @@ _PyPopenCreateProcess(char *cmdstring,
                       HANDLE hStderr,
                       HANDLE *hProcess)
 {
+#if PY_UWP
+    return FALSE;
+#else
     PROCESS_INFORMATION piProcInfo;
     STARTUPINFO siStartInfo;
     DWORD dwProcessFlags = 0;  /* no NEW_CONSOLE by default for Ctrl+C handling */
@@ -5530,6 +5553,7 @@ _PyPopenCreateProcess(char *cmdstring,
     }
     win32_error("CreateProcess", s2);
     return FALSE;
+#endif
 }
 
 /* The following code is based off of KB: Q190351 */
@@ -8678,6 +8702,13 @@ the underlying Win32 ShellExecute function doesn't work if it is.");
 static PyObject *
 win32_startfile(PyObject *self, PyObject *args)
 {
+#if PY_UWP
+    /* XXX startfile on WinRT? */
+    PyErr_SetString(PyExc_NotImplementedError,
+        "startfile is not supported on WinRT");
+    return NULL;
+#else
+
     char *filepath;
     Py_UNICODE *wpath;
     char *operation = NULL;
@@ -8731,6 +8762,7 @@ normal:
     PyMem_Free(filepath);
     Py_INCREF(Py_None);
     return Py_None;
+#endif
 }
 #endif /* MS_WINDOWS */
 

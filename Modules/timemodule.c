@@ -805,7 +805,7 @@ inittimezone(PyObject *m) {
      */
 #if defined(HAVE_TZNAME) && !defined(__GLIBC__) && !defined(__CYGWIN__)
     tzset();
-#ifdef PYOS_OS2
+#if defined(PYOS_OS2) || defined(PY_UWP)
     PyModule_AddIntConstant(m, "timezone", _timezone);
 #else /* !PYOS_OS2 */
     PyModule_AddIntConstant(m, "timezone", timezone);
@@ -813,15 +813,21 @@ inittimezone(PyObject *m) {
 #ifdef HAVE_ALTZONE
     PyModule_AddIntConstant(m, "altzone", altzone);
 #else
-#ifdef PYOS_OS2
+#if defined(PYOS_OS2) || defined(PY_UWP)
     PyModule_AddIntConstant(m, "altzone", _timezone-3600);
 #else /* !PYOS_OS2 */
     PyModule_AddIntConstant(m, "altzone", timezone-3600);
 #endif /* PYOS_OS2 */
 #endif
+#if defined(PY_UWP)
+    PyModule_AddIntConstant(m, "daylight", _daylight);
+    PyModule_AddObject(m, "tzname",
+                       Py_BuildValue("(zz)", _tzname[0], _tzname[1]));
+#else
     PyModule_AddIntConstant(m, "daylight", daylight);
     PyModule_AddObject(m, "tzname",
-                       Py_BuildValue("(zz)", tzname[0], tzname[1]));
+        Py_BuildValue("(zz)", tzname[0], tzname[1]));
+#endif
 #else /* !HAVE_TZNAME || __GLIBC__ || __CYGWIN__*/
 #ifdef HAVE_STRUCT_TM_TM_ZONE
     {

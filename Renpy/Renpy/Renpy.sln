@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renpy", "Renpy.vcxproj", "{BECF322C-E864-48FD-8714-8AE01CC30812}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Python27", "..\Python27\Python27.vcxproj", "{2F275E58-76D5-4614-9DAB-F7645A83C5DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM.Build.0 = Debug|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM64.Build.0 = Debug|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x64.ActiveCfg = Debug|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x64.Build.0 = Debug|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x64.Deploy.0 = Debug|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x86.ActiveCfg = Debug|Win32
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x86.Build.0 = Debug|Win32
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Debug|x86.Deploy.0 = Debug|Win32
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM.ActiveCfg = Release|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM.Build.0 = Release|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM.Deploy.0 = Release|ARM
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM64.ActiveCfg = Release|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM64.Build.0 = Release|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|ARM64.Deploy.0 = Release|ARM64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x64.ActiveCfg = Release|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x64.Build.0 = Release|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x64.Deploy.0 = Release|x64
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x86.ActiveCfg = Release|Win32
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x86.Build.0 = Release|Win32
+		{BECF322C-E864-48FD-8714-8AE01CC30812}.Release|x86.Deploy.0 = Release|Win32
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|ARM.Build.0 = Debug|ARM
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|x64.ActiveCfg = Debug|x64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|x64.Build.0 = Debug|x64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|x86.ActiveCfg = Debug|Win32
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Debug|x86.Build.0 = Debug|Win32
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|ARM.ActiveCfg = Release|ARM
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|ARM.Build.0 = Release|ARM
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|ARM64.Build.0 = Release|ARM64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|x64.ActiveCfg = Release|x64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|x64.Build.0 = Release|x64
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|x86.ActiveCfg = Release|Win32
+		{2F275E58-76D5-4614-9DAB-F7645A83C5DC}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A427DD6-5A2F-4146-B570-2B31BC11572C}
+	EndGlobalSection
+EndGlobal

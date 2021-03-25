@@ -1435,7 +1435,7 @@ find_module(char *fullname, char *subname, PyObject *path, char *buf,
             return &fd_frozen;
         }
 
-#ifdef MS_COREDLL
+#if defined(MS_COREDLL) && !PY_UWP
         fp = PyWin_FindRegisteredModule(name, &fdp, buf, buflen);
         if (fp != NULL) {
             *p_fp = fp;

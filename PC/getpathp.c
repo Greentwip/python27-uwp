@@ -220,6 +220,7 @@ extern const char *PyWin_DLLVersionString;
    in advance.  It could be simplied now Win16/Win32s is dead!
 */
 
+#if !PY_UWP
 static char *
 getpythonregpath(HKEY keyBase, int skipcore)
 {
@@ -366,6 +367,7 @@ done:
 }
 #endif /* Py_ENABLE_SHARED */
 #endif /* MS_WINDOWS */
+#endif
 
 static void
 get_progpath(void)
@@ -511,7 +513,7 @@ calculate_path(void)
     }
 
     skiphome = pythonhome==NULL ? 0 : 1;
-#ifdef Py_ENABLE_SHARED
+#if defined(Py_ENABLE_SHARED) && !PY_UWP
     machinepath = getpythonregpath(HKEY_LOCAL_MACHINE, skiphome);
     userpath = getpythonregpath(HKEY_CURRENT_USER, skiphome);
 #endif

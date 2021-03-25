@@ -569,7 +569,7 @@ charmap_decode(PyObject *self,
     return codec_tuple(unicode, pbuf.len);
 }
 
-#if defined(MS_WINDOWS) && defined(HAVE_USABLE_WCHAR_T)
+#if defined(MS_WINDOWS) && defined(HAVE_USABLE_WCHAR_T) && defined(HAVE_MBCS)
 
 static PyObject *
 mbcs_decode(PyObject *self,
@@ -1097,7 +1097,7 @@ static PyMethodDef _codecs_functions[] = {
     {"charmap_build",           charmap_build,                  METH_VARARGS},
     {"readbuffer_encode",       readbuffer_encode,              METH_VARARGS},
     {"charbuffer_encode",       charbuffer_encode,              METH_VARARGS},
-#if defined(MS_WINDOWS) && defined(HAVE_USABLE_WCHAR_T)
+#if defined(MS_WINDOWS) && defined(HAVE_USABLE_WCHAR_T) && defined(HAVE_MBCS)
     {"mbcs_encode",             mbcs_encode,                    METH_VARARGS},
     {"mbcs_decode",             mbcs_decode,                    METH_VARARGS},
 #endif

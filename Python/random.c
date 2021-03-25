@@ -24,6 +24,8 @@ typedef BOOL (WINAPI *CRYPTGENRANDOM)(HCRYPTPROV hProv, DWORD dwLen,\
 static CRYPTGENRANDOM pCryptGenRandom = NULL;
 /* This handle is never explicitly released. Instead, the operating
    system will release it when the process terminates. */
+
+#if !PY_UWP
 static HCRYPTPROV hCryptProv = 0;
 
 static int
@@ -95,6 +97,8 @@ win32_urandom(unsigned char *buffer, Py_ssize_t size, int raise)
     }
     return 0;
 }
+
+#endif
 
 /* Issue #25003: Don't use getentropy() on Solaris (available since
    Solaris 11.3), it is blocking whereas os.urandom() should not block.
@@ -421,11 +425,13 @@ _PyRandom_Init(void)
 void
 _PyRandom_Fini(void)
 {
-#ifdef MS_WINDOWS
+#if defined(MS_WINDOWS) 
+#if !PY_UWP
     if (hCryptProv) {
         CryptReleaseContext(hCryptProv, 0);
         hCryptProv = 0;
     }
+#endif
 #elif defined(PY_GETENTROPY)
     /* nothing to clean */
 #else

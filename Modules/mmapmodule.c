@@ -472,6 +472,16 @@ mmap_resize_method(mmap_object *self,
         /* Change the size of the file */
         SetEndOfFile(self->file_handle);
         /* Create another mapping object and remap the file view */
+#if PY_UWP
+        self->map_handle = CreateFileMappingFromApp(
+            self->file_handle,
+            NULL,
+            PAGE_READWRITE,
+            0,
+            0,
+            self->tagname);
+
+#else
         self->map_handle = CreateFileMapping(
             self->file_handle,
             NULL,
@@ -479,6 +489,8 @@ mmap_resize_method(mmap_object *self,
             0,
             0,
             self->tagname);
+
+#endif
         if (self->map_handle != NULL) {
             self->data = (char *) MapViewOfFile(self->map_handle,
                                                 FILE_MAP_WRITE,
@@ -1405,12 +1417,23 @@ new_mmap_object(PyTypeObject *type, PyObject *args, PyObject *kwdict)
     off_lo = (DWORD)(offset & 0xFFFFFFFF);
     /* For files, it would be sufficient to pass 0 as size.
        For anonymous maps, we have to pass the size explicitly. */
+#if PY_UWP
+    m_obj->map_handle = CreateFileMappingFromApp(m_obj->file_handle,
+        NULL,
+        flProtect,
+        size_hi,
+        size_lo,
+        m_obj->tagname);
+
+#else
     m_obj->map_handle = CreateFileMapping(m_obj->file_handle,
-                                          NULL,
-                                          flProtect,
-                                          size_hi,
-                                          size_lo,
-                                          m_obj->tagname);
+        NULL,
+        flProtect,
+        size_hi,
+        size_lo,
+        m_obj->tagname);
+
+#endif
     if (m_obj->map_handle != NULL) {
         m_obj->data = (char *) MapViewOfFile(m_obj->map_handle,
                                              dwDesiredAccess,

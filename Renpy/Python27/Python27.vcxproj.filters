@@ -1,0 +1,934 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Native">
+      <UniqueIdentifier>{145d89ca-4d90-4e30-8f7a-880f12244376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UWP">
+      <UniqueIdentifier>{16648260-f0c5-40df-84c0-b0b46b7c4a60}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Modules\_bisectmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_cn.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_hk.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_iso2022.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_jp.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_kr.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\_codecs_tw.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_codecsmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_collectionsmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_csv.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_functoolsmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_heapqmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_hotshot.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\_iomodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_json.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_localemodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_lsprof.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_math.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_randommodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_sre.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_struct.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\_subprocess.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\_warnings.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_weakref.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\_winreg.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\abstract.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\acceler.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\adler32.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\arraymodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\asdl.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\ast.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\audioop.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\binascii.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\bitset.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\bltinmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\boolobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\bufferedio.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\bufferobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\bytearrayobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\bytes_methods.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\bytesio.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\capsule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\cellobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\ceval.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\classobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cmathmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\cobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\codecs.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\codeobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\compile.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\complexobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\compress.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\config.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cPickle.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\crc32.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cStringIO.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\datetimemodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\deflate.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\descrobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\dictobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\dl_nt.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\dtoa.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\dynload_win.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\enumobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\errnomodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\errors.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\exceptions.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\fileio.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\fileobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\firstsets.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\floatobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\formatter_string.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\formatter_unicode.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\frameobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\frozen.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\funcobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\future.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\future_builtins.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\gcmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\genobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getargs.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\getbuildinfo.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getcompiler.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getcopyright.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getopt.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\getpathp.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getplatform.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\getversion.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\graminit.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\grammar.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\grammar1.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\gzclose.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\gzlib.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\gzread.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\gzwrite.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\imageop.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\import.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\import_nt.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\importdl.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\infback.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\inffast.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\inflate.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\inftrees.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\intobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\iobase.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\iterobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\itertoolsmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\listnode.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\listobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\longobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\main.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\marshal.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\mathmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\md5.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\md5module.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\memoryobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\metagrammar.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\methodobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\mmapmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\modsupport.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\moduleobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PC\msvcrtmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\cjkcodecs\multibytecodec.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\myreadline.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\mysnprintf.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\mystrtoul.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\node.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\object.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\obmalloc.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\operator.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\parser.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\parsermodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\parsetok.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\peephole.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\posixmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pyarena.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pyctype.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pyfpe.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pymath.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pystate.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pystrcmp.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pystrtod.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\Python-ast.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\pythonrun.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\random.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\rangeobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\rotatingtree.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\setobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\sha256module.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\sha512module.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\shamodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\signalmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\sliceobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\stringio.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\stringobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\stropmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\structmember.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\structseq.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\symtable.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\symtablemodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\sysmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\_io\textio.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\thread.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\threadmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\timemodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\tokenizer.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Python\traceback.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\trees.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\tupleobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\typeobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\uncompr.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\unicodectype.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\unicodeobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Objects\weakrefobject.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\xxsubtype.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zipimport.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlibmodule.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Modules\zlib\zutil.c">
+      <Filter>Native</Filter>
+    </ClCompile>
+    <ClCompile Include="Python27.cpp">
+      <Filter>UWP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Modules\_io\_iomodule.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\_math.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\abstract.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\alg_jisx0201.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\asdl.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\ast.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\bitset.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\boolobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\bufferobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\bytearrayobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\bytes_methods.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\bytesobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\cellobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\ceval.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\cjkcodecs.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\classobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\cobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\code.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\codecs.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\compile.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\complexobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\stringlib\count.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\crc32.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\cStringIO.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\datetime.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\deflate.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\descrobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\dictobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\dtoa.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\emu_jisx0213_2000.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\enumobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\errcode.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PC\errmap.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\eval.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\stringlib\fastsearch.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\fileobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\stringlib\find.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\floatobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\frameobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\funcobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\genobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\graminit.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\grammar.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\import.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Python\importdl.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\inffast.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\inffixed.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\inflate.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\inftrees.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\intobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\intrcheck.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\iterobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\listobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\longintrepr.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\longobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_cn.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_hk.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_jisx0213_pair.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_jp.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_kr.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\mappings_tw.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\marshal.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\md5.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\memoryobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\metagrammar.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\methodobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\modsupport.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\moduleobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\cjkcodecs\multibytecodec.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\node.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\object.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\objimpl.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\opcode.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\osdefs.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Parser\parser.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\parsetok.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\stringlib\partition.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\patchlevel.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pgen.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pgenheaders.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\py_curses.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyarena.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pycapsule.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PC\pyconfig.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyctype.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pydebug.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyerrors.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyexpat.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyfpe.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pygetopt.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pymactoolbox.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pymath.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pymem.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pyport.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pystate.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pystrcmp.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pystrtod.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Python.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Python-ast.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pythonrun.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\pythread.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\rangeobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\rotatingtree.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\setobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\sliceobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\stringlib\split.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\stringobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\structmember.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\structseq.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\symtable.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\sysmodule.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Python\thread_nt.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\timefuncs.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\token.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Parser\tokenizer.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\traceback.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\trees.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\tupleobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\ucnhash.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\unicodeobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Objects\unicodetype_db.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\weakrefobject.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\zconf.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\zconf.in.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\zlib.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Modules\zlib\zutil.h">
+      <Filter>Native</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -680,8 +680,10 @@ init_subprocess()
     defint(d, "STD_OUTPUT_HANDLE", STD_OUTPUT_HANDLE);
     defint(d, "STD_ERROR_HANDLE", STD_ERROR_HANDLE);
     defint(d, "DUPLICATE_SAME_ACCESS", DUPLICATE_SAME_ACCESS);
+#if !PY_UWP
     defint(d, "STARTF_USESTDHANDLES", STARTF_USESTDHANDLES);
     defint(d, "STARTF_USESHOWWINDOW", STARTF_USESHOWWINDOW);
+#endif
     defint(d, "SW_HIDE", SW_HIDE);
     defint(d, "INFINITE", INFINITE);
     defint(d, "WAIT_OBJECT_0", WAIT_OBJECT_0);
