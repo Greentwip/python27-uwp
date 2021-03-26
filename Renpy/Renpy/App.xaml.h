@@ -1,27 +1,24 @@
 ﻿//
 // App.xaml.h
-// Declaration of the App class.
+// Deklaration der App-Klasse
 //
 
 #pragma once
 
 #include "App.g.h"
 
-namespace Renpy
+namespace python34app
 {
 	/// <summary>
-	/// Provides application-specific behavior to supplement the default Application class.
+	/// Stellt das anwendungsspezifische Verhalten bereit, um die Standardanwendungsklasse zu ergänzen.
 	/// </summary>
 	ref class App sealed
 	{
-	protected:
-		virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e) override;
-
-	internal:
+	public:
 		App();
+		virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ pArgs) override;
 
 	private:
 		void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ e);
-		void OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs ^e);
 	};
 }

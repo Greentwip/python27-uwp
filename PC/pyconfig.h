@@ -162,8 +162,13 @@ WIN32 is still required for the locale module.
 /* set the version macros for the windows headers */
 #ifdef MS_WINX64
 /* 64 bit only runs on XP or greater */
+#if PY_UWP
+#define Py_WINVER _WIN32_WINNT_WIN10
+#define Py_NTDDI NTDDI_WIN10
+#else
 #define Py_WINVER _WIN32_WINNT_WINXP
 #define Py_NTDDI NTDDI_WINXP
+#endif
 #else
 /* Python 2.6+ requires Windows 2000 or greater */
 #ifdef _WIN32_WINNT_WIN2K
@@ -324,7 +329,7 @@ Py_NO_ENABLE_SHARED to find out.  Also support MS_NO_COREDLL for b/w compat */
 /* For an MSVC DLL, we can nominate the .lib files used by extensions */
 #ifdef MS_COREDLL
 #	ifndef Py_BUILD_CORE /* not building the core - must be an ext */
-#		if defined(_MSC_VER)
+#		if defined(_MSC_VER) && !PY_UWP
 			/* So MSVC users need not specify the .lib file in
 			their Makefile (other compilers are generally
 			taken care of by distutils.) */

@@ -159,6 +159,8 @@
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\..\PC;$(SolutionDir)\..\..\Include;$(SolutionDir)\..\..\Python;$(SolutionDir)\..\..\Modules\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PY_UWP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -175,14 +177,27 @@
     <ClInclude Include="MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="Privacy.xaml.h">
+      <DependentUpon>Privacy.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="PyShell.xaml.h">
+      <DependentUpon>PyShell.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Settings.xaml.h">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Common\StandardStyles.xaml" />
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Privacy.xaml" />
+    <Page Include="PyShell.xaml" />
+    <Page Include="Settings.xaml" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -215,6 +230,25 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Privacy.xaml.cpp">
+      <DependentUpon>Privacy.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="PyShell.xaml.cpp">
+      <DependentUpon>PyShell.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="Settings.xaml.cpp">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Python27\Python27.vcxproj">
+      <Project>{2f275e58-76d5-4614-9dab-f7645a83c5dc}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="python27.zip">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
