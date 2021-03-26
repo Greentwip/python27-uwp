@@ -7,7 +7,7 @@
 
 #include "App.g.h"
 
-namespace python34app
+namespace python27
 {
 	/// <summary>
 	/// Stellt das anwendungsspezifische Verhalten bereit, um die Standardanwendungsklasse zu ergänzen.

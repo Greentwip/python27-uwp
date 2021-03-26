@@ -13,7 +13,7 @@ using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::UI::Xaml::Documents;
 using namespace Windows::UI::ApplicationSettings;
 
-namespace python34app
+namespace python27
 {
 	[Windows::Foundation::Metadata::WebHostHidden]
 	public ref class PyShell sealed

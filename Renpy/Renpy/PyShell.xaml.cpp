@@ -10,7 +10,7 @@
 #include "Python.h"
 #include <ppltasks.h>
 
-using namespace python34app;
+using namespace python27;
 
 using namespace Platform;
 using namespace Platform::Collections;
@@ -413,7 +413,7 @@ void PyShell::run_code()
     }
 }
 
-void python34app::PyShell::KeyDown(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
+void python27::PyShell::KeyDown(Platform::Object^ sender, Windows::UI::Xaml::Input::KeyRoutedEventArgs^ e)
 {
     if (e->Key == Windows::System::VirtualKey::Enter) {
         String^ line = current_input->Text;
@@ -511,7 +511,7 @@ void PyShell::AddErrAsync(wchar_t *s)
     AddTextAsync(ref new String(s), true);
 }
 
-void python34app::PyShell::do_restart(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void python27::PyShell::do_restart(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     StopInterpreter();
     StartInterpreter();
@@ -524,7 +524,7 @@ void PyShell::run_simple_string()
     //PyGILState_Release(s);
 }
 
-void python34app::PyShell::run_file(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void python27::PyShell::run_file(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     FileOpenPicker^ fop = ref new FileOpenPicker();
     fop->SuggestedStartLocation = PickerLocationId::DocumentsLibrary;

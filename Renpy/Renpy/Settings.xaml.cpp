@@ -6,7 +6,7 @@
 #include "pch.h"
 #include "Settings.xaml.h"
 
-using namespace python34app;
+using namespace python27;
 
 using namespace Platform;
 using namespace Windows::Foundation;
@@ -28,14 +28,14 @@ Settings::Settings(PyShell ^s):
 }
 
 
-void python34app::Settings::do_close(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void python27::Settings::do_close(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     auto popup = (Popup^)Parent;
     popup->IsOpen = false;
 }
 
 
-void python34app::Settings::white_on_black(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void python27::Settings::white_on_black(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     shell->set_forecolor(Windows::UI::Colors::White);
     shell->set_backcolor(Windows::UI::Colors::Black);
@@ -43,7 +43,7 @@ void python34app::Settings::white_on_black(Platform::Object^ sender, Windows::UI
 }
 
 
-void python34app::Settings::black_on_white(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+void python27::Settings::black_on_white(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
     shell->set_forecolor(Windows::UI::Colors::Black);
     shell->set_backcolor(Windows::UI::Colors::White);

@@ -6,7 +6,7 @@
 #include "pch.h"
 #include "Privacy.xaml.h"
 
-using namespace python34app;
+using namespace python27;
 
 using namespace Platform;
 using namespace Windows::Foundation;

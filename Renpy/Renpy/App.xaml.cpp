@@ -6,7 +6,7 @@
 #include "PyShell.xaml.h"
 #include "Python.h"
 
-using namespace python34app;
+using namespace python27;
 
 using namespace Platform;
 using namespace Windows::ApplicationModel;

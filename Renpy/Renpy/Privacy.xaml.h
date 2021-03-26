@@ -7,7 +7,7 @@
 
 #include "Privacy.g.h"
 
-namespace python34app
+namespace python27
 {
 	[Windows::Foundation::Metadata::WebHostHidden]
 	public ref class Privacy sealed

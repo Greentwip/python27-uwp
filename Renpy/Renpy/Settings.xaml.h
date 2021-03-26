@@ -8,7 +8,7 @@
 #include "Settings.g.h"
 #include "PyShell.xaml.h"
 
-namespace python34app
+namespace python27
 {
 	[Windows::Foundation::Metadata::WebHostHidden]
 	public ref class Settings sealed
